@@ -1,0 +1,46 @@
+{
+  "name": "dsh-hncsd",
+  "version": "1.0.0",
+  "description": "元婴识海：把一个本地根目录下的一级子目录映射成星云光点，颜色编码目录数、大小编码会话数。",
+  "type": "module",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "client.three.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "source-local/guards.js",
+    "source-local/scan-host.js",
+    "skills-local/report.js",
+    "skills-local/actions.js",
+    "skills-local/portability.js",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE",
+    "THIRD_PARTY_NOTICES.md"
+  ],
+  "engines": {
+    "node": ">=20.19.0"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gszadmin/dsh-hncsd.git"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true
+    }
+  }
+}

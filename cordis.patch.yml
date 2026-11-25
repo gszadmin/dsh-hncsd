@@ -1,0 +1,20 @@
+- insert:
+    - id: brain-workspaces
+      name: dsh-hncsd
+      config:
+        # 预留的快照/槽位目录：目前只被校验、运行期未使用。默认空串 = 未配置，
+        # 不把任何本机盘符路径带给其他用户；需要时自行填绝对路径。
+        dataDir: ''
+        maxDepth: 5
+        maxDirs: 20000
+        timeoutMs: 8000
+        includeHidden: false
+        ignoreNames:
+          - .git
+          - node_modules
+          - dist
+          - build
+          - .cache
+          - .venv
+          - vendor
+        allowRoots: []
